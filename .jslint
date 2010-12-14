@@ -1,0 +1,6 @@
+-comparison_type_conv
+-inc_dec_within_stmt
+-missing_default_case
+-no_return_value
+-ambiguous_newline
+-anon_no_return_value

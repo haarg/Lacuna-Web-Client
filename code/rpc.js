@@ -33,8 +33,8 @@ if (typeof YAHOO.rpc.Service == "undefined" || !YAHOO.rpc.Service) {
 		/**
 		* Generate the function from a service definition
 		* @method _generateService
-		* @param {String} serviceName
-		* @param {Method definition} method
+		* @param {string} serviceName
+		* @param {object} method
 		*/
 		_generateService: function(serviceName, method) {
 

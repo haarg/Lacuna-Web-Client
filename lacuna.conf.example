@@ -1,0 +1,19 @@
+# if set, RPC requests will be proxied through the local server.
+# this will allow the client to work with all browsers.
+rpc_proxy  = 1
+
+# root path to send RPC requests to.
+rpc_root   = //us1.lacunaexpanse.com/
+
+# root path to use for assets.
+asset_root = //d31vg7s0o0m3uh.cloudfront.net/assets/
+
+# root path for YUI libraries.
+yui_root   = //ajax.googleapis.com/ajax/libs/yui/2.8.2r1/build/
+
+# root path for code files.  not used with local server.
+code_root  = //localhost/
+
+# API key for RPC requests.  Visit http://us1.lacunaexpanse.com/apikey to request a key.
+api_key    =
+

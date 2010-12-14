@@ -8,37 +8,24 @@
 			query[pair[0]] = decodeURIComponent(pair[1]);
 		}
 	}
-	l.hash = '';
+	if (l.hash.length > 0) {
+		l.hash = '';
+	}
 	
 	var p = document.getElementById("pulsing");
 	if(p.className.indexOf('hidden') < 0) {
 		p.className += ' hidden';
 	}
 	
-/** BUILD
-	var host = '**CODEROOT';
+	var host = '[% code_root %]';
 	var loader = new YAHOO.util.YUILoader({
-		base: "//ajax.googleapis.com/ajax/libs/yui/2.8.2r1/build/",
-		filter: "MIN",
-		allowRollup: true,
-		combine: false
+		base: '[% yui_root %]',
+		filter: [% IF debug %]'RAW'[% ELSE %]'MIN'[% END %],
+		allowRollup: [% IF debug %]false[% ELSE %]true[% END %]
 	});
 	var urlBuilder = function(file) {
-		return host + file;
+		return host + file[% IF debug %] + '?' + Math.random()[% END %];
 	};
-/** END */
-/** DEBUG */
-	var host = window.lacuna_code_base_url || window.lacuna_s3_base_url;
-	var loader = new YAHOO.util.YUILoader({
-		base: "//ajax.googleapis.com/ajax/libs/yui/2.8.2r1/build/",
-		filter: "RAW",
-		allowRollup: false,
-		combine: false
-	});
-	var urlBuilder = function(file) {
-		return host + file + '?3';
-	};
-/** END */
 
 	loader.addModule({
 		name: "smd",

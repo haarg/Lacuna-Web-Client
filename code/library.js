@@ -81,7 +81,7 @@ if (typeof YAHOO.lacuna.Library == "undefined" || !YAHOO.lacuna.Library) {
 	var Util = YAHOO.util,
 		Lang = YAHOO.lang,
 		Dom = Util.Dom,
-		assetUrl = window.lacuna_s3_base_url + 'assets/';
+		assetUrl = '[% asset_root %]';
 
 	var xPad=function (x, pad, r) {
 		if(typeof r === 'undefined') {
@@ -94,7 +94,7 @@ if (typeof YAHOO.lacuna.Library == "undefined" || !YAHOO.lacuna.Library) {
 	};
 
 	var Library = {
-		ApiKey : "53137d8f-3544-4118-9001-b0acbec70b3d",
+		ApiKey : "[% api_key %]",
 		AssetUrl : assetUrl,
 		Styles : {
 			HIDDEN : "hidden",
